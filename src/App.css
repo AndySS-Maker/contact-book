@@ -1,38 +1,257 @@
-.App {
+*{
+  font-family: 'Crafty Girls', cursive;
+  margin: 0px;
+  padding: 0px;
+  background-color: #3FA1FF
+}
+
+.navbar{
+  width: 100vw;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #3FA1FF;
+  color:white;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homePage{
+  background-color: #3FA1FF;
+  color: white;
+  height: 100vh;
+}
+
+.homePage-title{
+  margin: 70px;
+  font-size: 40px;
+  width: 60vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homePage-icon{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 200px;
+  margin-top: 80px;
+}
+
+.homePage-button-title{
+  font-size: 26px;
+  font-weight: bolder;
+  border-radius: 8px;
+  border-color: #F7841E;
+  background-color: #F7841E;
+  color: white;
+  padding: 8px;
+}
+
+.homePage-button-singIn{
+  padding: 50px 0px 0px 140px;
+}
+
+.homePage-button-singUp{
+  padding: 20px 0px 0px 135px;
+}
+
+.singUp-form{
+  background-color: #3FA1FF;
+  height: 100vh;
+}
+
+.singUp-form-content{
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 160px 50px 0px 50px;
+  padding: 20px;
+  height: 400px;
+  background-color: white;
+  border-color: white;
+}
+
+.singUp-form-button{
+  font-size: 22px;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #F7841E;
+  color: white;
+  margin-left: 80px;
+  padding: 6px;
+  margin-top: 40px;  
+}
+
+.singUp-form-title{
+  font-size: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+label{
+  font-weight: bolder;
+  display: flex;
+  background-color: white;
+  padding-bottom: 6px;
+  padding-top: 5px;
+}
+
+.singIn-title{
+  font-weight: lighter;
+  padding: 30px 0px 0px 110px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.singIn-contacts{
+  border: 2px solid;
+  border-radius: 20px;
+  width: 80vw;
+  height: 600px;
+  background-color: white;
+  margin: 25px 0px 0px 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#signupFormName{
+  width: 227px;
+  background-color: white;
+}
+
+#signupFormEmail{
+  width: 227px;
+  background-color: white;
+}
+
+#signupFormPassword{
+  width: 227px;
+  background-color: white;
+}
+
+#signupFormphoneNumber{
+  width: 227px;
+  background-color: white;
+}
+
+.newContact-form{
+  background-color: #3FA1FF;
+  height: 100vh;
+}
+
+.newContact-form-content{
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 50px 50px 0px 50px;
+  padding: 20px;
+  height: 620px;
+  background-color: white;
+  border-color: white;
+}
+
+.newContact-form-button{
+  font-size: 22px;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #F7841E;
+  color: white;
+  margin-left: 80px;
+  padding: 6px;
+  margin-top: 40px;  
+}
+
+.newContact-form-title{
+  font-size: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+label{
+  font-weight: bolder;
+  display: flex;
+  background-color: white;
+  padding-bottom: 6px;
+  padding-top: 5px;
+}
+
+.newContact-title{
+  font-weight: lighter;
+  padding: 30px 0px 0px 110px;
+  color: white;
+}
+
+.newContact{
+  border: 2px solid;
+  border-radius: 20px;
+  width: 80vw;
+  height: 600px;
+  background-color: white;
+  margin: 25px 0px 0px 35px;
+}
+
+#newContact-name{
+  width: 227px;
+  background-color: white;
+}
+
+#newContact-nickName{
+  width: 227px;
+  background-color: white;
+}
+
+#newContact-phoneNumber{
+  width: 227px;
+  background-color: white;
+}
+
+#newContact-email{
+  width: 227px;
+  background-color: white;
+}
+
+#newContact-address{
+  width: 227px;
+  background-color: white;
+}
+
+#newContact-note{
+  width: 227px;
+  height: 130px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
