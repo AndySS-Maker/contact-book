@@ -24,7 +24,7 @@ const ContacDetails = (props) => {
   });
 
   return (
-    <div>
+    <div style={{backgroundColor: '#3FA1FF', height: '100vh'}}>
       <Navbar />
 
       <div className="contact-detail">

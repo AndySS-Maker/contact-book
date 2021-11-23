@@ -24,7 +24,7 @@ function SignIn() {
   }
 
   return (
-    <div>
+    <div style={{backgroundColor: '#3FA1FF', height: '100vh'}}>
       <Navbar />
 
       <div className="signIn-form fadeInDown">

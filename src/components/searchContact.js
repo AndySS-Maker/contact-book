@@ -1,20 +1,24 @@
 import React from "react";
+ 
 class SearchContact extends React.Component {
   state = {
     input: "",
   };
 
-  componentDidUpdate(prevState) {
-    if (this.state.input !== prevState.input) {
-      this.props.filterContact(this.state.input);
-    }
-  }
-
   handleSearch = (event) => {
     const { value } = event.target;
-    this.setState({
-      input: value,
-    });
+    const { state, updataState } = this.props;
+    const filteredData = state.allContacts.filter(contact => {
+    const lowerName = contact.name.toLowerCase()
+    const lowerValue = value.toLowerCase()
+    const condition = lowerName.includes(lowerValue)
+      return condition;
+    })
+    this.setState({input: value})
+    if(value === ''){
+     updataState(state.allContacts)  
+    }
+    updataState(filteredData)
   };
 
   render() {

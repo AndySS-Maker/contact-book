@@ -15,8 +15,6 @@ function Navbar() {
       <Link to={"/newContact"}>
         <i className="far fa-plus-square"></i>
       </Link>
-
-      <i className="fas fa-search"></i>
     </div>
   );
 }

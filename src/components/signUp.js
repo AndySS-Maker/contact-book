@@ -26,10 +26,10 @@ function SignUp() {
   }
 
   return (
-    <div>
+    <div style={{backgroundColor: '#3FA1FF'}}>
       <Navbar />
 
-      <div className="signUp-form fadeInDown">
+      <div className="signUp-form fadeInDown" style={{paddingTop: '80px'}}>
         <form className="signUp-form-content">
           <h1 className="signUp-form-title">Register</h1>
 
@@ -70,7 +70,7 @@ function SignUp() {
           />
 
           <div style={{ backgroundColor: "white" }}>
-            <Link to={"/"} style={{ backgroundColor: "white" }}>
+            <Link to={"/signIn"} style={{ backgroundColor: "white" }}>
               <button className="signUp-form-button">Send</button>
             </Link>
           </div>

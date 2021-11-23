@@ -4,13 +4,18 @@ import axios from "axios";
 
 import Navbar from "./navBar";
 import AllContactsCard from "./allContactsCard";
-// import SearchContact from './searchContact';
+import SearchContact from './searchContact';
 
 class AllContacts extends Component {
   state = {
     allContacts: [],
     filtered: [],
   };
+
+  updataState = (value) => {
+    this.setState({...this.state, filtered: value})
+  }
+
   componentDidMount = async () => {
     try {
       const response = await axios.get(
@@ -18,10 +23,10 @@ class AllContacts extends Component {
       );
 
       const { data } = response;
-      const filteredData =[...data]
-        filteredData.sort((a, b) => {
-        const aName = a.name.toLowerCase()
-        const bName = b.name.toLowerCase()
+      const orderedData = [...data];
+      orderedData.sort((a, b) => {
+        const aName = a.name.toLowerCase();
+        const bName = b.name.toLowerCase();
 
         if (aName > bName) {
           return 1;
@@ -31,30 +36,21 @@ class AllContacts extends Component {
         }
         return 0;
       });
-      
-      console.log({ data, filteredData });
 
       this.setState({
-        allContacts: data,
-        filtered: filteredData,
+        allContacts: orderedData,
+        filtered: orderedData,
       });
     } catch (error) {
       console.log(error);
     }
   };
 
-  filterContact = (input) => {
-    const filtered = this.state.allContacts.filter((contact) =>
-      contact.name.toLowerCase().includes(input.toLowerCase())
-    );
-    this.setState({ filtered });
-  };
-
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: '#3FA1FF', paddingBottom: '20px', height: '100vh'}}>
         <Navbar />
-        {/* <SearchContact filterContact={this.filterContact} /> */}
+        <SearchContact state={this.state} updataState={this.updataState} />
 
         <div>
           <h1 className="allContacts-title">Contatos</h1>

@@ -35,12 +35,13 @@ class NewContact extends Component {
       note: "",
     });
   };
+
   render() {
-    console.log({ banana: this.handleSubmit });
+    
     return (
-      <div>
+      <div style={{backgroundColor: '#3FA1FF'}}>
         <Navbar />
-        <div className="newContact-form fadeInDown">
+        <div className="newContact-form fadeInDown" style={{paddingTop: '30px'}}>
           <form className="newContact-form-content">
             <h1 className="newContact-form-title">New Contact</h1>
 
