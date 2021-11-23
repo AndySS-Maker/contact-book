@@ -1,19 +1,24 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-    return (
-        <div className='navbar'>
-          
-           <i class="fas fa-home"></i>
-    
-           <i className="far fa-user"></i>
-        
-           <i class="far fa-plus-square"></i>
+  return (
+    <div className="navbar">
+      <Link to={"/"}>
+        <i className="fas fa-home"></i>
+      </Link>
 
-           <i class="fas fa-search"></i>
-                  
-        </div>
-    );
+      <Link to={"/allContacts"}>
+        <i className="far fa-user"></i>
+      </Link>
+
+      <Link to={"/newContact"}>
+        <i className="far fa-plus-square"></i>
+      </Link>
+
+      <i className="fas fa-search"></i>
+    </div>
+  );
 }
 
 export default Navbar;

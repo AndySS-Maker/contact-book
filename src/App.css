@@ -47,30 +47,30 @@
   padding: 8px;
 }
 
-.homePage-button-singIn{
+.homePage-button-signIn{
   padding: 50px 0px 0px 140px;
 }
 
-.homePage-button-singUp{
+.homePage-button-signUp{
   padding: 20px 0px 0px 135px;
 }
 
-.singUp-form{
+.signUp-form{
   background-color: #3FA1FF;
   height: 100vh;
 }
 
-.singUp-form-content{
+.signUp-form-content{
   border: 2px solid;
   border-radius: 10px;
-  margin: 160px 50px 0px 50px;
+  margin: 110px 50px 0px 50px;
   padding: 20px;
   height: 400px;
   background-color: white;
   border-color: white;
 }
 
-.singUp-form-button{
+.signUp-form-button{
   font-size: 22px;
   border-radius: 10px;
   border-color: white;
@@ -81,7 +81,7 @@
   margin-top: 40px;  
 }
 
-.singUp-form-title{
+.signUp-form-title{
   font-size: 30px;
   background-color: white;
   display: flex;
@@ -97,39 +97,69 @@ label{
   padding-top: 5px;
 }
 
-.singIn-title{
+.allContacts-title{
   font-weight: lighter;
   padding: 30px 0px 0px 110px;
   color: white;
 }
 
-.singIn-contacts{
-  border: 2px solid;
-  border-radius: 20px;
-  width: 80vw;
-  height: 600px;
-  background-color: white;
-  margin: 25px 0px 0px 35px;
-}
-
 #signupFormName{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #signupFormEmail{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #signupFormPassword{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #signupFormphoneNumber{
   width: 227px;
+  background-color: #f5f3f3;
+}
+
+.signIn-form-content{
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 110px 50px 0px 50px;
+  padding: 20px;
+  height: 260px;
   background-color: white;
+  border-color: white;
+}
+
+.signIn-form-button {
+  font-size: 22px;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #F7841E;
+  color: white;
+  margin-left: 75px;
+  padding: 6px;
+  margin-top: 20px;
+}
+
+.signIn-form-title {
+  font-size: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+#signInFormName{
+  width: 227px;
+  background-color: #f5f3f3;
+}
+
+#signInFormPassword{
+  width: 227px;
+  background-color: #f5f3f3;
 }
 
 .newContact-form{
@@ -189,36 +219,90 @@ label{
   margin: 25px 0px 0px 35px;
 }
 
+a{
+  color:#f5f3f3;
+}
+
 #newContact-name{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #newContact-nickName{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #newContact-phoneNumber{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #newContact-email{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #newContact-address{
   width: 227px;
-  background-color: white;
+  background-color: #f5f3f3;
 }
 
 #newContact-note{
   width: 227px;
   height: 130px;
-  background-color: white;
+  background-color: #f5f3f3;
   border-radius: 15px;
+}
+
+.allContact-card{
+  border: 2px solid;
+  border-radius: 10px;
+  width: 70vw;
+  padding: 5px 0px 5px 15px;
+  margin: 15px 0px 0px 50px;
+  color: black;
+  background-color: #f5f3f3;
+}
+
+.contact-detail{
+  border: 2px solid;
+  border-radius: 20px;
+  width: 80vw;
+  height: 600px;
+  background-color: white;
+  margin: 55px 0px 0px 35px;
+}
+
+.contact-detail-name{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.contact-detail-title{
+  font-size: 18px;
+  background-color: white;
+  margin: 20px 0px 0px 30px
+}
+
+.contact-detail-content{
+  background-color:#f5f3f3;
+  margin: 5px 0px 10px 25px;
+  padding: 6px;
+  font-weight: bolder;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.search-input{
+  width: 90vw;
+  background-color: #f5f3f3;
+  margin-left: 18px;
+  border-radius: 10px;
+  padding: 4px;
 }
 
 .fadeInDown {
@@ -255,3 +339,4 @@ label{
     transform: none;
   }
 }
+

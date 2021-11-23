@@ -1,101 +1,107 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Component } from "react";
+import axios from "axios";
 
-import TextInput from './textInput';
-import Navbar from './navBar';
+import TextInput from "./textInput";
+import Navbar from "./navBar";
 
-function NewContact() {
-    const [state, setState] = useState({
-        name: '',
-        nickName: '',
-        address: '',
-        phoneNumber: '',
-        email: '',
-        note: '',
-    })
+class NewContact extends Component {
+  state = {
+    name: "",
+    address: "",
+    phoneNumber: "",
+    email: "",
+    note: "",
+  };
 
-    function handleChange(event) {
-        if(event.target.files){
-            return setState({
-                ...state, [event.currentTarget.name] : event.currentTarget.files[0],
-            });
-        }
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await axios.post(
+      "https://ironrest.herokuapp.com/contactBook",
+      this.state
+    );
 
-        setState({
-            ...state,
-            [event.currentTarget.name] : event.currentTarget.value,
-        });
-    }
+    console.log({ response });
 
+    this.setState({
+      name: "",
+      address: "",
+      phoneNumber: "",
+      email: "",
+      note: "",
+    });
+  };
+  render() {
+    console.log({ banana: this.handleSubmit });
     return (
-        <div>
-        < Navbar />
-        <div className='newContact-form fadeInDown'>
-           <form className='newContact-form-content'>
-          
-            <h1 className='newContact-form-title'>New Contact</h1>
-            
+      <div>
+        <Navbar />
+        <div className="newContact-form fadeInDown">
+          <form className="newContact-form-content">
+            <h1 className="newContact-form-title">New Contact</h1>
+
             <TextInput
-            label="Name"
-            type="text"
-            name="name"
-            id="newContact-name"
-            value={state.name}
-            onChange={handleChange}
+              label="Name"
+              type="text"
+              name="name"
+              id="newContact-name"
+              value={this.state.name}
+              onChange={this.handleChange}
             />
 
             <TextInput
-            label="Nickname"
-            type="text"
-            name="nickName"
-            id="newContact-nickName"
-            value={state.nickName}
-            onChange={handleChange}
+              label="Phone Number"
+              type="text"
+              name="phoneNumber"
+              id="newContact-phoneNumber"
+              value={this.state.phoneNumber}
+              onChange={this.handleChange}
             />
 
             <TextInput
-            label="Phone Number"
-            type="text"
-            name="phoneNumber"
-            id="newContact-phoneNumber"
-            value={state.phoneNumber}
-            onChange={handleChange}
+              label="E-mail"
+              type="email"
+              name="email"
+              id="newContact-email"
+              value={this.state.email}
+              onChange={this.handleChange}
             />
 
             <TextInput
-            label="E-mail"
-            type="email"
-            name="email"
-            id="newContact-email"
-            value={state.email}
-            onChange={handleChange}
+              label="Address"
+              type="text"
+              name="address"
+              id="newContact-address"
+              value={this.state.address}
+              onChange={this.handleChange}
             />
 
             <TextInput
-            label="Address"
-            type="text"
-            name="address"
-            id="newContact-address"
-            value={state.address}
-            onChange={handleChange}
+              label="Note"
+              type="text"
+              name="note"
+              id="newContact-note"
+              value={this.state.note}
+              onChange={this.handleChange}
             />
 
-            <TextInput
-            label="Note"
-            type="text"
-            name="note"
-            id="newContact-note"
-            value={state.note}
-            onChange={handleChange}
-            />
-
-            <div style={{backgroundColor: 'white'}}>
-              <button className='singUp-form-button'>Save</button>
+            <div style={{ backgroundColor: "white" }}>
+              <button
+                onClick={this.handleSubmit}
+                className="signUp-form-button"
+              >
+                Save
+              </button>
             </div>
-
-        </form>
+          </form>
         </div>
-        </div>
-    )
+      </div>
+    );
+  }
 }
 
-export default NewContact
+export default NewContact;

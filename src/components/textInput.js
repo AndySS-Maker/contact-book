@@ -10,7 +10,7 @@ function TextInput(props) {
         name={props.name}
       />
     </div>
-  )
+  );
 }
 
 export default TextInput;
