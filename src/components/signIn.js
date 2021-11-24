@@ -24,14 +24,15 @@ function SignIn() {
   }
 
   return (
-    <div style={{backgroundColor: '#3FA1FF', height: '100vh'}}>
+    <div className="signIn-container">
       <Navbar />
 
       <div className="signIn-form fadeInDown">
         <form className="signIn-form-content">
           <h1 className="signIn-form-title">Sign In</h1>
 
-          <TextInput
+          <div className="signIn-form-input">
+            <TextInput
             label="Name"
             type="text"
             name="name"
@@ -48,10 +49,11 @@ function SignIn() {
             value={state.password}
             onChange={handleChange}
           />
+          </div>
 
-          <div style={{ backgroundColor: "white" }}>
-            <Link to={"/allContacts"} style={{ backgroundColor: "white" }}>
-              <button className="signIn-form-button">Send</button>
+          <div>
+            <Link to={"/allContacts"}>
+              <button className="signIn-form-button" type='submit'>Send</button>
             </Link>
           </div>
         </form>

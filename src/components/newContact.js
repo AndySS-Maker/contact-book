@@ -39,13 +39,14 @@ class NewContact extends Component {
   render() {
     
     return (
-      <div style={{backgroundColor: '#3FA1FF'}}>
+      <div className="newContact-container">
         <Navbar />
-        <div className="newContact-form fadeInDown" style={{paddingTop: '30px'}}>
+        <div className="newContact-form fadeInDown">
           <form className="newContact-form-content">
             <h1 className="newContact-form-title">New Contact</h1>
-
-            <TextInput
+            
+            <div className='newContact-form-input'>
+              <TextInput
               label="Name"
               type="text"
               name="name"
@@ -89,11 +90,12 @@ class NewContact extends Component {
               value={this.state.note}
               onChange={this.handleChange}
             />
+            </div>
 
-            <div style={{ backgroundColor: "white" }}>
+            <div>
               <button
                 onClick={this.handleSubmit}
-                className="signUp-form-button"
+                className="newContact-form-button"
               >
                 Save
               </button>

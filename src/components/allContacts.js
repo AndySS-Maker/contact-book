@@ -48,14 +48,14 @@ class AllContacts extends Component {
 
   render() {
     return (
-      <div style={{backgroundColor: '#3FA1FF', paddingBottom: '20px', height: '100vh'}}>
+      <div className="allContacts">
         <Navbar />
         <SearchContact state={this.state} updataState={this.updataState} />
 
         <div>
           <h1 className="allContacts-title">Contatos</h1>
 
-          <div>
+          <div className="allContacts-content">
             {this.state.filtered.map((contact) => (
               <AllContactsCard key={contact._id} {...contact} />
             ))}

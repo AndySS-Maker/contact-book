@@ -24,25 +24,28 @@ const ContacDetails = (props) => {
   });
 
   return (
-    <div style={{backgroundColor: '#3FA1FF', height: '100vh'}}>
+    <div className="contact-detail-container">
       <Navbar />
 
       <div className="contact-detail">
         <h1 className="contact-detail-name">{contactDetails.name}</h1>
+      
+        <div className="contact-detail-info">
+          <h2 className="contact-detail-title">Phone number</h2>
+          <p className="contact-detail-content">{contactDetails.phoneNumber}</p>
 
-        <h2 className="contact-detail-title">Phone number</h2>
-        <p className="contact-detail-content">{contactDetails.phoneNumber}</p>
+          <h2 className="contact-detail-title">Address</h2>
+          <p className="contact-detail-content">{contactDetails.address}</p>
 
-        <h2 className="contact-detail-title">Address</h2>
-        <p className="contact-detail-content">{contactDetails.address}</p>
+          <h2 className="contact-detail-title">E-mail</h2> 
+          <p className="contact-detail-content">{contactDetails.email}</p>
 
-        <h2 className="contact-detail-title">E-mail</h2>
-        <p className="contact-detail-content">{contactDetails.email}</p>
+          <h2 className="contact-detail-title">Note</h2>
+          <p className="contact-detail-content" style={{ height: "140px" }}>
+            {contactDetails.note}
+          </p>
+        </div>
 
-        <h2 className="contact-detail-title">Note</h2>
-        <p className="contact-detail-content" style={{ height: "140px" }}>
-          {contactDetails.note}
-        </p>
       </div>
     </div>
   );

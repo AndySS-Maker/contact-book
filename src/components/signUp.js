@@ -26,14 +26,15 @@ function SignUp() {
   }
 
   return (
-    <div style={{backgroundColor: '#3FA1FF'}}>
+    <div className="signUp-container">
       <Navbar />
 
-      <div className="signUp-form fadeInDown" style={{paddingTop: '80px'}}>
+      <div className="signUp-form fadeInDown">
         <form className="signUp-form-content">
           <h1 className="signUp-form-title">Register</h1>
 
-          <TextInput
+          <div className="signUp-form-input">
+            <TextInput
             label="Name"
             type="text"
             name="name"
@@ -68,9 +69,10 @@ function SignUp() {
             value={state.phoneNumber}
             onChange={handleChange}
           />
+          </div>
 
-          <div style={{ backgroundColor: "white" }}>
-            <Link to={"/signIn"} style={{ backgroundColor: "white" }}>
+          <div>
+            <Link to={"/signIn"}>
               <button className="signUp-form-button">Send</button>
             </Link>
           </div>
