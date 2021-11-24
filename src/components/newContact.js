@@ -8,6 +8,7 @@ import Navbar from "./navBar";
 class NewContact extends Component {
   state = {
     name: "",
+    cep: "",
     address: "",
     phoneNumber: "",
     email: "",
@@ -29,12 +30,30 @@ class NewContact extends Component {
 
     this.setState({
       name: "",
+      cep: "",
       address: "",
       phoneNumber: "",
       email: "",
       note: "",
     });
   };
+
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+
+    const value = e.target.value
+    if(value.length === 8){
+      axios.get(
+     `https://viacep.com.br/ws/${value}/json/` 
+    ).then(
+      res => {
+        this.setState({
+          ...this.state , address: res.data.logradouro
+        })
+      }
+    )
+    }
+  }
 
   render() {
     
@@ -73,6 +92,15 @@ class NewContact extends Component {
               onChange={this.handleChange}
             />
 
+            <TextInput
+              label="Search by CEP"
+              type="number"
+              name="cep"
+              id="newContact-cep"
+              value={this.state.cep}
+              onChange={this.onChange}
+            />
+            
             <TextInput
               label="Address"
               type="text"

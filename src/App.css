@@ -289,6 +289,12 @@ a{
   border-radius: 25px;
 }
 
+#newContact-cep{
+  width: 227px;
+  background-color: #f5f3f3;
+  border-radius: 25px;
+}
+
 .allContact-card{
   border: 2px solid;
   border-radius: 20px;
@@ -442,7 +448,7 @@ a{
   }
 
   .signIn-form-button{
-    margin-left: 170px;
+    margin-left: 165px;
     margin-top: 30px;
     font-size: 25px;
   }
@@ -454,7 +460,7 @@ a{
 
   .signUp-form-content{
     width: 500px;
-    height: 460px;
+    height: 480px;
     margin: 70px 0px 0px 120px;
   }
   
@@ -481,17 +487,17 @@ a{
 
   .newContact-form-content{
     padding-top: 60px;
-    width: 70vw;
-    height: 660px;
-    margin-left: 100px;
+    width: 65vw;
+    height: 700px;
+    margin-left: 115px;
   }
 
   .newContact-form-input{
-    padding-left: 150px;
+    padding-left: 130px;
   }
 
   .newContact-form-button{
-    margin-left: 222px;
+    margin-left: 200px;
     font-size: 28px;
     padding: 10px;
   }
